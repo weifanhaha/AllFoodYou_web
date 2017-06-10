@@ -1,5 +1,7 @@
 @media screen and (min-width: 880px){ 
 
+	/*common part*/
+
 	body {
 	  margin: 0;
 	  padding: 0;
@@ -116,6 +118,81 @@
 	}
 
 
+	#myfooter{
+		height: 50px;
+		text-align: center;
+		background-color: #ffc000;
+		color: white;
+		line-height: 50px;
+	}
+
+	#myfooter p{
+		text-decoration: underline;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	span{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+	p{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	li{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;	
+	}
+
+	.infoRow{
+		font-size: 24px;
+		/*text-align: center;*/
+	}
+
+	.infoRow i{
+		color: #ffc000;
+		margin-right: 15px; 
+		/*font-size: 30px;*/
+	}
+
+	.infoRow p{
+		/*font-size: 20px;*/
+		margin-left: 20px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-weight: 300;
+	}
+
+	.infoDetail{
+		position: relative;
+	    display: inline-block;
+	}
+
+	.infoDetail .detailText{
+		visibility: hidden;
+	    width: 100%;
+	    top: -5px;
+    	right: 70%; 
+	    background-color: black;
+	    color: #fff;
+	    /*text-align: center;*/
+	    padding: 5px;
+	    border-radius: 6px;
+	    position: absolute;
+	    z-index: 5;
+	    font-size: 16px;
+	}
+	.infoDetail:hover .detailText{
+		visibility: visible;
+	}
+
+	/*for ingredients*/
 	.carousel-container{
 		max-width: 1000px;
 		position: relative;
@@ -287,33 +364,6 @@
 	  cursor: pointer;
 	}
 
-	.infoRow{
-		font-size: 24px;
-		/*text-align: center;*/
-	}
-
-	.infoRow i{
-		color: #ffc000;
-		margin-right: 15px; 
-		/*font-size: 30px;*/
-	}
-
-	.infoRow p{
-		/*font-size: 20px;*/
-		margin-left: 20px;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		font-weight: 300;
-	}
-
-	#myfooter{
-		height: 50px;
-		text-align: center;
-		background-color: #ffc000;
-		color: white;
-		line-height: 50px;
-	}
-
 	.modal{
 		display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
@@ -470,31 +520,20 @@
 	    to {transform: scale(1)}
 	}
 
-
-
-
-	#myfooter p{
-		text-decoration: underline;
-		font-size: 20px;
-		cursor: pointer;
+	/*for cook*/
+	 .cooktitle{
+		border-width: 0 0 3px 0;
+		border-style: double;
+		border-color: #ffc000;
+		margin-bottom: 10px;
+		color: #ffc000;
 	}
 
-	span{
-		font-family: 'Noto Sans TC', sans-serif;
-		font-style: normal;
-		font-weight: 500;
+	.cooktitle p{
+		font-size: 25px;
+		margin: 2px;
+		
 	}
 
-	p{
-		font-family: 'Noto Sans TC', sans-serif;
-		font-style: normal;
-		font-weight: 400;
-	}
-
-	li{
-		font-family: 'Noto Sans TC', sans-serif;
-		font-style: normal;
-		font-weight: 400;	
-	}
 
 }

@@ -21,12 +21,12 @@
 		<div class="myspan">
 			<span class="titleSpan activeSpan"><i class="fa fa-home fa-4" aria-hidden="true"></i></span>
 			<a><span class="titleSpan">食譜推薦</span></a>
-			<a><span class="titleSpan activeSpan">買食材</span></a>
-			<a href="./food.html"><span class="titleSpan">買熟食</span></a>
+			<a href="./ingredients.html"><span class="titleSpan">買食材</span></a>
+			<a href="./food.html"><span class="titleSpan activeSpan">買熟食</span></a>
 			<a href="./cook.html"><span class="titleSpan">找飯友</span></a>
 			<span class="titleSpan login">Log in</span>
 		</div>
-		<input type="text" id="myInput" placeholder="請輸入欲搜尋食材之關鍵字">
+		<input type="text" id="myInput" placeholder="請輸入欲搜尋熟食之關鍵字">
 		<span class="search"><i class="fa fa-search" aria-hidden="true"></i></span>
 	</div>
 
@@ -35,52 +35,18 @@
 			<ul class="myUL">
 				<li class="titleLI">我是賣家</li>
 				<li class="titleLI">發起團購</li>
-				<li class="titleLI">特別企劃</li>
-				<li>▹ 即期品</li>
-				<li>▹ 醜蔬果</li>
-				<li>▹ 半成品</li>
-				<li>▹ 離我最近</li>
-				<li class="titleLI">依分類</li>
-				<li>▹ 蔬菜類</li>
-				<li>▹ 水果類</li>
-				<li>▹ 肉類</li>
-				<li>▹ 調味料</li>
-				<li>▹ 其他</li>
+				<li class="titleLI">分類搜尋</li>
+				<li>▹ 依地點</li>
+				<li>▹ 依口味</li>
+				<li>▹ 依時間</li>
+				<li>▹ 依食材</li>
+				<li>▹ 依朋友</li>
 
 			</ul>
 
 			
 		</div>
 		<div id="right">
-			<div id="top">
-				<div class="carousel-container">
-					<div class="mySlides fade">
-						<div class="numbertext">1 / 3</div>
-						<img src="./img/uglyvege.png" style="width:100%">
-						<div class="text">Caption Text</div>
-					</div>
-
-					<div class="mySlides fade">
-						<div class="numbertext">2 / 3</div>
-						<img src="./img/uglyvege.png" style="width:100%">
-						<div class="text">Caption Two</div>		
-					</div>
-
-					<div class="mySlides fade">
-						<div class="numbertext">3 / 3</div>
-						<img src="./img/uglyvege.png" style="width:100%">
-						<div class="text">Caption Three</div>
-					</div>
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
-				</div>	
-				<br>
-				<div style="text-align: center">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-				</div>
-			</div>
 			<div id="down">
 				<div class="textBox">
 					<p > <strong>[ 公館 ]</strong> 附近的最新產品 <a href="#"> 選擇其他地區 </a></p>
@@ -88,147 +54,152 @@
 				<div id="myItemWrapper" class="itemWrapper">
 					<div class="item">
 						<div class="titleBox">
-							<p>  丸莊醬油</p>
+							<p>  日式咖哩飯</p>
 						</div>
 						<div class="itemImg">
-							<img src="./img/sauce.jpg" alt="Avatar" class="image" style="width: 100%;">
+							<img src="./img/curry.jpg" alt="Avatar" class="image" style="height: 100%;">
 						    <div class="middle">
-						  		<div class="contactText" onclick="openChatBox('張葳凡')">聯絡賣家</div>
+						  		<div class="contactText" onclick="openChatBox('張葳凡')">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-user-circle" aria-hidden="true"></i>張葳凡</p>
 						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 60 / 一份（大份）</p>
+							<span class="detailText">份量提示：小份（100~150g) 中份(150~200g) 大份(200~250g)</span>
 						</div>
 						<div class="infoRow">
-							<p><i class="fa fa-tag" aria-hidden="true"></i>調味料</p>
+							<p><i class="fa fa-tag" aria-hidden="true"></i>日式</p>
 						</div>
 						<div class="infoRow infoDetail">
-							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>面交時地</p>
+							<span class="detailText">6/15中午11:30~13:30公館附近面交</span>
 						</div>
 					</div>
 					<div class="item">
 						<div class="titleBox">
-							<p>  雞腿</p>
+							<p>  燙高麗菜</p>
 						</div>
 						<div class="itemImg">
-							<img src="./img/chicken.jpg" alt="Avatar" class="image" style="width: 100%;">
+							<img src="./img/vegetable.jpg" alt="Avatar" class="image" style="height:  100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('姚箴')">聯絡賣家</div>
+						  		<div class="contactText" onclick="openChatBox('姚箴')">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-user-circle" aria-hidden="true"></i>姚箴</p>
 						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 1隻</p>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 20 / 一份（小份）</p>
+							<span class="detailText">份量提示：小份（100~150g) 中份(150~200g) 大份(200~250g)</span>
 						</div>
 						<div class="infoRow">
-							<p><i class="fa fa-tag" aria-hidden="true"></i>肉類</p>
+							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
 						</div>
 						<div class="infoRow infoDetail">
-							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/12晚上於頂好購入</p>
-							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
-							<span class="detailText">6/10下午於全聯購入</span> -->
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>面交時地</p>
+							<span class="detailText">6/15晚上17:30~19:00台大正門面交</span>
 						</div>
 					</div>
 					<div class="item">
 						<div class="titleBox">
-							<p>  豬里肌肉</p>
+							<p>  白飯</p>
 						</div>
 						<div class="itemImg">
-							<img src="./img/pork.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<img src="./img/rice.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('李知臨')">聯絡賣家</div>
+						  		<div class="contactText" onclick="openChatBox('李知臨')">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-user-circle" aria-hidden="true"></i>李知臨</p>
 						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 10 / 一份（中份）</p>
+							<span class="detailText">份量提示：小份（100~150g) 中份(150~200g) 大份(200~250g)</span>
 						</div>
 						<div class="infoRow">
-							<p><i class="fa fa-tag" aria-hidden="true"></i>肉類</p>
+							<p><i class="fa fa-tag" aria-hidden="true"></i>主食類</p>
 						</div>
 						<div class="infoRow infoDetail">
-							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/13早上於頂好購入</p>
-							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
-							<span class="detailText">6/10下午於全聯購入</span> -->
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>面交時地</p>
+							<span class="detailText">6/15晚上17:00~18:00台大正門面交</span>
 						</div>
 					</div>											
 					<div class="item">
 						<div class="titleBox">
-							<p>  八角香料</p>
+							<p>  香菇雞湯</p>
 						</div>
 						<div class="itemImg">
-							<img src="./img/8spicy.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<img src="./img/soup.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('甯芝蓶')">聯絡賣家</div>
+						  		<div class="contactText" onclick="openChatBox('甯芝蓶')">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-user-circle" aria-hidden="true"></i>甯芝蓶</p>
 						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 50 / 100g</p>
-						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-tag" aria-hidden="true"></i>調味料</p>
-						</div>
-
 						<div class="infoRow infoDetail">
-							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 一份（中份）</p>
+							<span class="detailText">份量提示：小份（100~150g) 中份(150~200g) 大份(200~250g)</span>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>湯類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>面交時地</p>
+							<span class="detailText">6/14晚上17:30~19:00台大女四面交</span>
 						</div>
 					</div>		
 					<div class="item">
 						<div class="titleBox">
-							<p>  小黃瓜</p>
+							<p>  宮保雞丁</p>
 						</div>
 						<div class="itemImg">
-							<img src="./img/cucumber.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<img src="./img/gonbao.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('陳如琦')">聯絡賣家</div>
+						  		<div class="contactText" onclick="openChatBox('陳如琦')">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-user-circle" aria-hidden="true"></i>陳如琦</p>
 						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 60 / 一份（大份）</p>
+							<span class="detailText">份量提示：小份（100~150g) 中份(150~200g) 大份(200~250g)</span>
 						</div>
 						<div class="infoRow">
-							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
+							<p><i class="fa fa-tag" aria-hidden="true"></i>中國菜</p>
 						</div>
 						<div class="infoRow infoDetail">
-							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/13下午於小南門市場購入</p>
-							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
-							<span class="detailText">6/13下午於小南門市場購入</span> -->
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>面交時地</p>
+							<span class="detailText">6/16中午12:00~13:00公館捷運三號出口</span>
 						</div>
 					</div>	
 					<div class="item">
 						<div class="titleBox">
-							<p>  小白菜</p>
+							<p>  薑絲大腸</p>
 						</div>
 						<div class="itemImg">
-							<img src="./img/vege.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<img src="./img/ginger.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('林怡萱');">聯絡賣家</div>
+						  		<div class="contactText" onclick="openChatBox('林怡萱');">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
 							<p><i class="fa fa-user-circle" aria-hidden="true"></i>林怡萱</p>
 						</div>
-						<div class="infoRow">
-							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 50 / 一份（中份）</p>
+							<span class="detailText">份量提示：小份（100~150g) 中份(150~200g) 大份(200~250g)</span>
 						</div>
 						<div class="infoRow">
-							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
+							<p><i class="fa fa-tag" aria-hidden="true"></i>客家菜</p>
 						</div>
 						<div class="infoRow infoDetail">
-							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/14早上於水源市場購入</p>
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>面交時地</p>
+							<span class="detailText">6/16晚上17:30~19:00公館捷運二號出口</span>
 						</div>
 					</div>
 				</div>
@@ -256,35 +227,6 @@
 
 	<script type="text/javascript">
 
-		//for slideshow
-		var slideIndex = 1;
-		showSlides(slideIndex);
-		function plusSlides(n){
-			showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n){
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
-			if ( n > slides.length) { slideIndex = 1;}
-			if ( n < 1) { slideIndex = slides.length;}
-
-			for ( i = 0 ; i < slides.length; i++){
-				slides[i].style.display = "none";
-			}
-
-			for (i = 0; i < dots.length; i++){
-				dots[i].className = dots[i].className.replace("active","");
-			}
-			slides[slideIndex-1].style.display="block";
-			dots[slideIndex-1].className += " active";
-		}
-
 		//open ChatBox according the name of the seller
 		function openChatBox(name){
 			document.getElementById("chat00").innerHTML = name;
@@ -309,7 +251,7 @@
 		//Give response for demo
 		function response(){
 			var resChatBox = document.getElementById("chat02");
-			resChatBox.innerHTML = "沒問題 待會見！";
+			resChatBox.innerHTML = "好～ 建議你自備容器來裝哦:)";
 			resChatBox.style.display = "block";
 		}
 
@@ -336,3 +278,4 @@
 
 
 </body>
+</html>
