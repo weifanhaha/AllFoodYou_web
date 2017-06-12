@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--created 2017/05
+	credit: Wei-Fan, Chang -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./style.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+  	<title>All Food You</title>
+
+</head>
+<body>
+
+	<div id="myheader">
+		<div class="myspan">
+			<span class="titleSpan activeSpan"><i class="fa fa-home fa-4" aria-hidden="true"></i></span>
+			<a href="./recipe.html"><span class="titleSpan">食譜推薦</span></a>
+			<a><span class="titleSpan activeSpan">買食材</span></a>
+			<a href="./food.html"><span class="titleSpan">買熟食</span></a>
+			<a href="./cook.html"><span class="titleSpan">找飯友</span></a>
+			<span class="titleSpan login" onclick="document.getElementById('login01').style.display='block'">Log in</span>
+		</div>
+		<input type="text" id="myInput" placeholder="請輸入欲搜尋食材之關鍵字">
+		<span class="search"><i class="fa fa-search" aria-hidden="true"></i></span>
+	</div>
+
+	<div id="container">
+		<div id="left">
+			<ul class="myUL">
+				<li class="titleLI">我是賣家</li>
+				<li class="titleLI">發起團購</li>
+				<li class="titleLI">特別企劃</li>
+				<li>▹ 即期品</li>
+				<li>▹ 醜蔬果</li>
+				<li>▹ 半成品</li>
+				<li>▹ 離我最近</li>
+				<li class="titleLI">依分類</li>
+				<li>▹ 蔬菜類</li>
+				<li>▹ 水果類</li>
+				<li>▹ 肉類</li>
+				<li>▹ 調味料</li>
+				<li>▹ 其他</li>
+			</ul>
+
+			
+		</div>
+		<div id="right">
+			<div id="top">
+				<div class="carousel-container">
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 3</div>
+						<img src="./img/uglyvege.png" style="width:100%">
+						<div class="text">Caption Text</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 3</div>
+						<img src="./img/uglyvege.png" style="width:100%">
+						<div class="text">Caption Two</div>		
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 3</div>
+						<img src="./img/uglyvege.png" style="width:100%">
+						<div class="text">Caption Three</div>
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>	
+				<br>
+				<div style="text-align: center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+			</div>
+			<div id="down">
+				<div class="textBox">
+					<p > <strong>[ 公館 ]</strong> 附近的最新產品 <a href="#"> 選擇其他地區 </a></p>
+				</div>
+				<div id="myItemWrapper" class="itemWrapper">
+					<div class="item">
+						<div class="titleBox">
+							<p>  丸莊醬油</p>
+						</div>
+						<div class="itemImg">
+							<img src="./img/sauce.jpg" alt="Avatar" class="image" style="width: 100%;">
+						    <div class="middle">
+						  		<div class="contactText" onclick="openChatBox('張葳凡')">聯絡賣家</div>
+						    </div>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-user-circle" aria-hidden="true"></i>張葳凡</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>調味料</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="titleBox">
+							<p>  雞腿</p>
+						</div>
+						<div class="itemImg">
+							<img src="./img/chicken.jpg" alt="Avatar" class="image" style="width: 100%;">
+							<div class="middle">
+						  		<div class="contactText" onclick="openChatBox('姚箴')">聯絡賣家</div>
+						    </div>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-user-circle" aria-hidden="true"></i>姚箴</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 1隻</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>肉類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/12晚上於頂好購入</p>
+							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
+							<span class="detailText">6/10下午於全聯購入</span> -->
+						</div>
+					</div>
+					<div class="item">
+						<div class="titleBox">
+							<p>  豬里肌肉</p>
+						</div>
+						<div class="itemImg">
+							<img src="./img/pork.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<div class="middle">
+						  		<div class="contactText" onclick="openChatBox('李知臨')">聯絡賣家</div>
+						    </div>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-user-circle" aria-hidden="true"></i>李知臨</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>肉類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/13早上於頂好購入</p>
+							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
+							<span class="detailText">6/10下午於全聯購入</span> -->
+						</div>
+					</div>											
+					<div class="item">
+						<div class="titleBox">
+							<p>  八角香料</p>
+						</div>
+						<div class="itemImg">
+							<img src="./img/8spicy.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<div class="middle">
+						  		<div class="contactText" onclick="openChatBox('甯芝蓶')">聯絡賣家</div>
+						    </div>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-user-circle" aria-hidden="true"></i>甯芝蓶</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 50 / 100g</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>調味料</p>
+						</div>
+
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
+						</div>
+					</div>		
+					<div class="item">
+						<div class="titleBox">
+							<p>  小黃瓜</p>
+						</div>
+						<div class="itemImg">
+							<img src="./img/cucumber.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<div class="middle">
+						  		<div class="contactText" onclick="openChatBox('陳如琦')">聯絡賣家</div>
+						    </div>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-user-circle" aria-hidden="true"></i>陳如琦</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/13下午於小南門市場購入</p>
+							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
+							<span class="detailText">6/13下午於小南門市場購入</span> -->
+						</div>
+					</div>	
+					<div class="item">
+						<div class="titleBox">
+							<p>  小白菜</p>
+						</div>
+						<div class="itemImg">
+							<img src="./img/vege.jpg" alt="Avatar" class="image" style="height: 100%;">
+							<div class="middle">
+						  		<div class="contactText" onclick="openChatBox('林怡萱');">聯絡賣家</div>
+						    </div>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-user-circle" aria-hidden="true"></i>林怡萱</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-usd" aria-hidden="true"></i> NT 30 / 100g</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-tag" aria-hidden="true"></i>蔬菜類</p>
+						</div>
+						<div class="infoRow infoDetail">
+							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/14早上於水源市場購入</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="id01" class="modal">
+				<div class="modal-content animate">
+					<div class="chatTitle">
+						<h2 id="chat00">林怡萱</h2>
+						<span onclick="closeChatBox()" class="close" title="Close Modal">&times;</span>
+					</div>
+					<span id="chat01" class="chatTextBox1"></span>
+					<span id="chat02" class="chatTextBox2"></span>
+
+					<input type="text" placeholder="傳送訊息給賣家..." id="myMessage" name="chat">
+					<span onclick="newTalk()" class="sendBtn">傳送</span>
+				</div>
+			</div>
+			<div id="login01" class="modal">
+				<div class="login-modal-content animate">
+					<h1>Log in</h1>
+					<p>Don't have an account?</p>
+					<p class="signUp">Sign up </p>
+						<span onclick="document.getElementById('login01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<div class="loginWith" style="background-color: #37639e;">
+						<p><i class="fa fa-facebook-square" aria-hidden="true"></i>Log in with Facebook</p>
+					</div>
+					<div class="loginWith" style="background-color: #5a9ef3;">
+						<p><i class="fa fa-twitter" aria-hidden="true"></i>Log in with Twitter</p>
+					</div>
+					<div class="loginWith" style="background-color: #e63527;">
+						<p><i class="fa fa-google-plus-square" aria-hidden="true"></i>Log in with Google</p>
+					</div>
+					<div class="loginWith" style="background: linear-gradient(to right,#ff6a39,#f154b7);">
+						<p><i class="fa  fa-instagram" aria-hidden="true"></i>Log in with Instagram</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="myfooter">
+		<p>聯絡我們</p>
+	</div>
+
+
+	<script type="text/javascript">
+
+		//for slideshow
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		function plusSlides(n){
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n){
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if ( n > slides.length) { slideIndex = 1;}
+			if ( n < 1) { slideIndex = slides.length;}
+
+			for ( i = 0 ; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+
+			for (i = 0; i < dots.length; i++){
+				dots[i].className = dots[i].className.replace("active","");
+			}
+			slides[slideIndex-1].style.display="block";
+			dots[slideIndex-1].className += " active";
+		}
+
+		//open ChatBox according the name of the seller
+		function openChatBox(name){
+			document.getElementById("chat00").innerHTML = name;
+			document.getElementById('id01').style.display='block';
+		}
+
+		// When sending message, create a chatTextBox
+		function newTalk(){
+			var chattext = document.getElementById("myMessage").value;
+			var chatBox = document.getElementById("chat01");
+			if(chattext === ''){
+				//do nothing
+			}
+			else{
+				chatBox.innerHTML = chattext;
+				chatBox.style.display="block";
+				document.getElementById("myMessage").value="";
+			}
+			setTimeout(response, 2500);
+		}	
+
+		//Give response for demo
+		function response(){
+			var resChatBox = document.getElementById("chat02");
+			resChatBox.innerHTML = "沒問題 待會見！";
+			resChatBox.style.display = "block";
+		}
+
+		var modal = document.getElementById('id01');
+
+		function closeChatBox(){
+			modal.style.display = "none";
+			document.getElementById("chat01").style.display = "none";
+			document.getElementById("chat02").style.display = "none";
+		}
+
+
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+
+		    }
+		}
+
+	</script>
+
+
+
+
+
+</body>

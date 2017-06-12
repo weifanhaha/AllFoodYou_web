@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--created 2017/05
+	credit: Wei-Fan, Chang -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./style.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+  	<title>All Food You</title>
+
+</head>
+<body>
+
+	<div id="myheader">
+		<div class="myspan">
+			<span class="titleSpan activeSpan"><i class="fa fa-home fa-4" aria-hidden="true"></i></span>
+			<a href="./recipe.html"><span class="titleSpan">食譜推薦</span></a>
+			<a href="./ingredients.html"><span class="titleSpan">買食材</span></a>
+			<a href="./food.html"><span class="titleSpan">買熟食</span></a>
+			<a><span class="titleSpan activeSpan">找飯友</span></a>
+			<span class="titleSpan login" onclick="document.getElementById('login01').style.display='block'">Log in</span>
+		</div>
+		<input type="text" id="myInput" placeholder="請輸入欲搜尋之關鍵字">
+		<span class="search"><i class="fa fa-search" aria-hidden="true"></i></span>
+	</div>
+
+	<div id="container">
+		<div id="left">
+			<ul class="myUL">
+				<li class="titleLI">揪團共煮</li>
+				<li class="titleLI">分類搜尋</li>
+				<li>▹ 依地點</li>
+				<li>▹ 依口味</li>
+				<li>▹ 依時間</li>
+				<li>▹ 依食材</li>
+				<li>▹ 依朋友</li>
+
+			</ul>
+
+			
+		</div>
+		<div id="right">
+			<div id="chef">
+				<div class="cooktitle">
+					<p>CHEF主揪</p>
+				</div>
+				<div class="chef">
+					<div class="chefImg">
+						<img src="./img/yiao.png" alt="Avatar" class="image" style="height: 100%;">
+					</div>
+					<div class="chefInfo">
+
+						<div class="chefTitle">
+							<div class="chefName">姚箴</div>
+							<div id="Btn01" class="followBtn" onclick="follow();">追蹤中</div>
+						</div>
+						
+						<div class="infoRow">
+							<p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-calendar" aria-hidden="true"></i>5/20 17:00</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i>公館一號共煮廚房</p>
+						</div>
+						<div class="infoRow">
+							<p><i class="fa fa-envelope-o" aria-hidden="true"></i>b04654321@ntu.edu.tw</p>
+						</div>
+					
+
+					</div>
+				</div>
+
+
+			</div>
+
+			<div id="food">
+				<div class="cooktitle">
+					<p>FOOD今日菜色</p>
+				</div>
+				<div class="foodWrapper">
+					<div class="foodItem">
+						<div class="foodImg">
+							<img src="./img/greencurry.jpg" alt="Avatar" class="image" style="height: 100%;">
+						</div>
+						<p>泰式綠咖哩</p>
+					</div>
+					<div class="foodItem">
+						<div class="foodImg">
+							<img src="./img/kongvege.jpg" alt="Avatar" class="image" style="height: 100%;">
+						</div>
+						<p>炒空心菜</p>
+					</div>
+					<div class="foodItem">
+						<div class="foodImg">
+							<img src="./img/soup2.jpg" alt="Avatar" class="image" style="height: 100%;">
+						</div>
+						<p>蘿蔔排骨湯</p>
+					</div>
+					<div class="foodItem">
+						<div class="foodImg">
+							<img src="./img/rice.jpg" alt="Avatar" class="image" style="height: 100%;">
+						</div>
+						<p>白飯</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="ingredient">
+				<div class="cooktitle">
+					<p>INGREDIENT所需食材</p>
+				</div>
+				<div class="ingreWrapper">
+					<form class="ingreList">
+						<input class="ingreItem" type="checkbox" name="ingre">雞肉 <br>
+						<input class="ingreItem" type="checkbox" name="ingre">空心菜<br>
+						<input class="ingreItem" type="checkbox" name="ingre">紅蘿蔔 <br>
+					</form>
+					<form class="ingreList">
+						<input class="ingreItem" type="checkbox" name="ingre">馬鈴薯	<br>
+						<input class="ingreItem" type="checkbox" name="ingre">綠咖哩醬<br>
+						<input class="ingreItem" type="checkbox" name="ingre">九層塔<br>
+					</form>
+					<form class="ingreList">	
+						<input class="ingreItem" type="checkbox" name="ingre">蕃茄 <br>
+						<input class="ingreItem" type="checkbox" name="ingre">蒜頭 <br>
+						<input class="ingreItem" type="checkbox" name="ingre">辣椒 <br>
+					</form>
+				</div>
+			</div>
+
+			<div id="attendee">
+				<div class="cooktitle">
+					<p>ATTENDEE參與人員 </p>
+				</div>
+				<div class="attendWrapper">
+					<div class="attender">
+						<div class="personPic">
+							<img class="personImg" src="./img/wei.jpg" width="100%">
+						</div>
+						<p>張葳凡<i class="fa fa-check-square" aria-hidden="true"></i></p>
+						<div class="infoRow">
+						<p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+					</div>
+					<div class="attender">
+						<div class="personPic">
+							<img class="personImg" src="./img/chi.jpg" width="100%">
+						</div>
+						<p>甯芝蓶<i class="fa fa-plus-square-o" aria-hidden="true"></i></p>
+						<div class="infoRow">
+						<p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+						</div>
+					</div>
+					<div class="attender">
+						<div id="a03" class="personPic" style="border:none;">
+							<img id="attend03" class="personImg" src="./img/person.png" width="100%">
+						</div>
+						<div id="readyToAttend">
+							<p>林怡萱<i class="fa fa-check-square" aria-hidden="true"></i></p>
+							<div class="infoRow">
+							<p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i></p>
+							</div>
+						</div>
+					</div>
+					<div class="attender">
+						<div class="personPic" style="border:none;">
+							<img class="personImg" src="./img/person.png" width="100%">
+						</div>
+					</div>
+					<div class="attender">
+						<div class="personPic" style="border:none;">
+							<img class="personImg" src="./img/person.png" width="100%">
+						</div>
+					</div>
+					<div class="joinBtn" onclick="join();">
+						<h1>JOIN NOW !</h1>
+					</div>
+
+				</div>
+
+
+			</div>
+
+
+
+
+		</div>
+		<div id="login01" class="modal">
+				<div class="login-modal-content animate">
+					<h1>Log in</h1>
+					<p>Don't have an account?</p>
+					<p class="signUp">Sign up </p>
+						<span onclick="document.getElementById('login01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<div class="loginWith" style="background-color: #37639e;">
+						<p><i class="fa fa-facebook-square" aria-hidden="true"></i>Log in with Facebook</p>
+					</div>
+					<div class="loginWith" style="background-color: #5a9ef3;">
+						<p><i class="fa fa-twitter" aria-hidden="true"></i>Log in with Twitter</p>
+					</div>
+					<div class="loginWith" style="background-color: #e63527;">
+						<p><i class="fa fa-google-plus-square" aria-hidden="true"></i>Log in with Google</p>
+					</div>
+					<div class="loginWith" style="background: linear-gradient(to right,#ff6a39,#f154b7);">
+						<p><i class="fa  fa-instagram" aria-hidden="true"></i>Log in with Instagram</p>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div id="myfooter">
+		<p>聯絡我們</p>
+	</div>
+
+
+
+<script type="text/javascript">
+	
+	var isFollow = 0;
+
+	function follow(){
+		var b = ["追蹤","追蹤中"];
+		var btn = document.getElementById('Btn01');
+		if( isFollow == 0){
+			btn.innerHTML = b[0];
+			btn.style.background = "white";
+			btn.style.color = "#ffc000";
+			isFollow = 1;
+		}
+		else{
+			btn.innerHTML = b[1];
+			btn.style.background = "#ffc000";
+			btn.style.color = "white";
+			isFollow = 0;
+		}
+	}
+
+	function join(){
+		var lin = document.getElementById('attend03');
+		lin.src = "./img/ju.jpg";
+		document.getElementById('a03').style.border = "2px solid #ffc000";
+		document.getElementById("readyToAttend").style.display = "block";
+	}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,738 @@
+/*@media screen and (min-width: 880px){ */
+
+	/*common part*/
+
+	body {
+	  margin: 0;
+	  padding: 0;
+	}
+
+	#myheader{
+		position: relative;
+	}
+
+	#container{
+		/*width: 100%;*/
+		display: flex;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	#left{
+		width: 20%;
+	}
+	#right{
+		width: 80%;
+		padding-left: 5%;
+	}
+
+	.myspan{
+		background-color: #ffc000;
+		padding: 3px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.titleSpan{
+		margin: : 5px;
+		background-color: #ffc000;
+		width:15%;
+		color: #ae850e;
+		float: left;
+		text-align: center;
+		font-size: 24px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+	.titleSpan:hover{
+		color: white;
+	}
+
+	.activeSpan{
+		color: white;
+	}
+
+	.titleSpan i{
+		padding-top: 3px;
+		font-size: 40px;
+	}
+
+	.login{
+		border-left-width: 3px;
+		border-color: white;
+		border-left-style: solid;
+	}
+
+	/*The color in active mode should be modified*/
+	#myheader input{	
+		width: 85%;
+		padding: 5px 15px;
+		margin: 30px 10px 30px 50px;
+		float: left;
+		font-size: 24px;
+		border-color: #ffc000;
+		color:#ffc000;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+
+
+	.search{
+		cursor: pointer;
+		position: absolute;
+		top:80px;
+		right: 60px;
+		/*bottom: 20px;*/
+		/*padding: 100px 0 30px 0;*/
+		/*margin: 150px 0 30px 0;*/
+		font-size: 40px;
+		color: #ffc000;
+	}
+
+	.myUL{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	.myUL .titleLI{
+		background-color: #fff2cc;
+
+	}
+
+	.myUL li{
+		cursor: pointer;
+		position: relative;
+		padding: 6px 4px 6px 30px;
+		margin: 5px;
+		font-size: 20px;
+		transition: 0.2s;
+		/* make the list items unselectable */
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+	}
+
+
+	#myfooter{
+		height: 50px;
+		text-align: center;
+		background-color: #ffc000;
+		color: white;
+		line-height: 50px;
+	}
+
+	#myfooter p{
+		text-decoration: underline;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	span{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+	p{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	li{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;	
+	}
+
+	.infoRow{
+		font-size: 24px;
+		/*text-align: center;*/
+	}
+
+	.infoRow i{
+		color: #ffc000;
+		margin-right: 15px; 
+		/*font-size: 30px;*/
+	}
+
+	.infoRow p{
+		/*font-size: 20px;*/
+		margin-left: 20px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-weight: 300;
+	}
+
+	.infoDetail{
+		position: relative;
+	    display: inline-block;
+	}
+
+	.infoDetail .detailText{
+		visibility: hidden;
+	    width: 100%;
+	    top: -5px;
+    	right: 70%; 
+	    background-color: black;
+	    color: #fff;
+	    /*text-align: center;*/
+	    padding: 5px;
+	    border-radius: 6px;
+	    position: absolute;
+	    z-index: 5;
+	    font-size: 16px;
+	}
+	.infoDetail:hover .detailText{
+		visibility: visible;
+	}
+
+
+	.login-modal-content {
+		position: relative;
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 30%; /* Could be more or less, depending on screen size */
+	    height: 500px;
+	    text-align: center;
+
+	}
+
+	.loginWith{
+		width: 60%;
+		margin:5px auto 5px auto;
+		padding: 1px 10px;
+		color: white;
+		font-size: 16px;
+		border-radius: 10px;
+		cursor: pointer;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+	.loginWith i{
+		margin-right: 5px;
+		font-size: 20px;
+	}
+
+	.signUp{
+		cursor: pointer;
+		color: #ffc000;
+		text-decoration: underline;
+		text-decoration-color: #ffc000;
+
+	}
+
+	/*for ingredients*/
+	.carousel-container{
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+	}
+
+	.mySlides{
+		display: none;
+	}
+
+	.prev, .next{
+		cursor: pointer;
+		position: absolute;
+		top:50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+	}
+
+	.next{
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	.next:hover, .prev:hover{
+		background-color: rgba(0,0,0,0.6);
+	}
+
+	.text{
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.numbertext{
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+	}
+
+	.dot{
+		cursor: pointer;
+		height: 13px;
+		width: 13px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover{
+		background-color: #ffc000;
+	}
+
+	.fade{
+		-webkit-animation-name:fade;
+		-webkit-animation-duration:1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+		form {opacity: .4}
+		to {opacity: 1}
+	}
+
+	@keyframes fade{
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+
+	.textBox{
+		border-width: 0 0 3px 0;
+		border-style: double;
+		border-color: #ffc000;
+		margin-bottom: 10px;
+	}
+
+	.textBox p{
+		font-size: 20px;
+	}
+
+	.textBox p a{
+		font-size: 16px;
+		color: #bbb;
+	}
+
+	.textBox strong{
+		color:  #ffc000;
+	}
+
+	.itemWrapper{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.item{
+		/*min-width: 200px;*/
+		width: 33%;
+	}
+
+	.titleBox{
+		margin-left: 20px;
+		padding-left: 15px;
+		border-style: solid;
+		border-color: #ffc000;
+		border-width: 0 0 0 5px;
+		font-size: 24px;
+		/*text-align: center;*/
+	}
+
+	.itemImg{
+		overflow: hidden;
+		margin:10%; 
+		width:180px;
+		height: 180px;
+		box-shadow: 0px 0px 20px #888888;
+		position: relative;
+	}
+
+	.image{
+		opacity: 1;
+		display: block;
+		height: 100%;
+		width: auto;
+		transition: .5s ease;
+		backface-visibility: hidden;
+	}
+
+	.middle{
+		transition: .5s;
+		opacity: 0;
+		/*display: none;*/
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%)
+	}
+
+	.itemImg:hover .image{
+		opacity: 0.3;
+	}
+
+	.itemImg:hover .middle{
+		/*display: block;*/
+		opacity: 1;
+	}
+
+	.contactText{
+		border-radius: 10px;
+	  background-color: #ffc000;
+	  color: white;
+	  font-size: 16px;
+	  padding: 4px 8px;
+	  cursor: pointer;
+	}
+
+	.modal{
+		display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	    padding-top: 60px;
+	}
+
+	.modal-content {
+		position: relative;
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 30%; /* Could be more or less, depending on screen size */
+	    height: 500px;
+
+	}
+
+	.chatTitle{
+		border: 0 0 1px 0 solid #888;
+		text-align: center;
+		background-color: rgba(255,192,0,0.4);
+		padding: 10px 10px;
+	}
+
+	.chatTitle h2{
+		margin: 0;
+	}
+
+	/* The Close Button (x) */
+	.close {
+	    position: absolute;
+	    right: 25px;
+	    top: 0;
+	    color: #000;
+	    font-size: 35px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		opacity: 0.4;
+	    cursor: pointer;
+	}
+
+	.modal-content input{
+		border-width: 1px 1px 0 0;
+		border-style: solid ;
+		border-color: #ffc000;
+		padding: 10px;
+		width:70%;
+		font-size: 16px;
+		position: absolute;
+		bottom: 0;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	.chatTextBox1 {
+	    width: 150px;
+	    background-color: #ffc000;
+	    color: #fff;
+	    text-align: left;
+	    padding: 5px;
+	    border-radius: 6px;
+
+	    /* Position the tooltip text */
+	    position: absolute;
+	    /*z-index: 2;*/
+	    top: 15%;
+	    right: 5%;
+	    margin-left: -60px;
+	    display:none;
+
+	}
+	.chatTextBox1::after {
+	    content: " ";
+	    position: absolute;
+	    top: 50%;
+	    left: 100%; /* To the right of the tooltip */
+	    margin-top: -5px;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: transparent transparent transparent #ffc000;
+	}
+
+	.chatTextBox2 {
+	    width: 150px;
+	    background-color: #ffc000;
+	    color: #fff;
+	    text-align: left;
+	    padding: 5px;
+	    border-radius: 6px;
+
+	    /* Position the tooltip text */
+	    position: absolute;
+	    /*z-index: 2;*/
+	    top: 30%;
+	    left: 5%;
+	    /*margin-left: -60px;*/
+	    display:none;
+
+	}
+	.chatTextBox2::after {
+	    content: " ";
+	    position: absolute;
+	    top: 50%;
+	    right: 100%; /* To the right of the tooltip */
+	    margin-top: -5px;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: transparent #ffc000 transparent transparent;
+	}
+
+	.sendBtn{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 10px;
+		width: 20%;
+		border: 1px solid #ffc000;
+		background-color: #ffc000;
+		color: white;
+		text-align: center;
+		font-size: 16px;
+		cursor: pointer;
+		transition: 0.3s;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+	}
+	.sendBtn:hover{
+		opacity: 0.8;
+	}
+
+	.animate {
+	    -webkit-animation: animatezoom 0.6s;
+	    animation: animatezoom 0.6s
+	}
+
+	@-webkit-keyframes animatezoom {
+	    from {-webkit-transform: scale(0)} 
+	    to {-webkit-transform: scale(1)}
+	}
+	    
+	@keyframes animatezoom {
+	    from {transform: scale(0)} 
+	    to {transform: scale(1)}
+	}
+
+	/*for cook*/
+	 .cooktitle{
+		border-width: 0 0 3px 0;
+		border-style: double;
+		border-color: #ffc000;
+		margin-bottom: 10px;
+		color: #ffc000;
+	}
+
+	.cooktitle p{
+		font-size: 25px;
+		margin: 2px;
+		
+	}
+
+	.chef{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.chefTitle{
+		padding-left: 15px;
+		display: flex;
+		margin-top: 20px; 
+		margin-bottom: 20px;
+	}
+
+	.chefImg{
+		overflow: hidden;
+		margin:30px; 
+		width:300px;
+		height: 300px;
+		
+		box-shadow: 0px 0px 20px #888888;
+		position: relative;
+	}
+
+	.chefInfo{
+		width: 50%;
+		padding: 30px;
+	}
+
+	.chefName{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-size: 30px;
+		font-weight: 500;
+		width: 30%;
+		margin: 0;
+
+	}
+
+	.followBtn{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-size: 24px;
+		background-color: #ffc000;
+		border-radius: 8px;
+		border: 2px;
+		border-style: solid;
+		border-color: #ffc000;
+		width: 30%;
+		padding: 2px 5px; 
+		margin: 0;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.foodWrapper{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.foodItem{
+		width: 20%;
+		text-align: center;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-size: 24px;
+	}
+
+	.foodImg{
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+		margin:10%; 
+		box-shadow: 0px 0px 20px #888888;
+	}
+
+	.ingreWrapper{
+		display: flex;
+		margin: 30px 50px 60px 10px;
+	}
+
+	.ingreList{
+		width: 30%
+		margin: 3%;
+		font-size: 24px;
+	}
+
+	.ingreItem{
+		margin: 10px;
+	}
+
+	.attendWrapper{
+		display: flex;
+		flex-wrap: nowrap;
+		position: relative;
+	}
+
+	.attender{
+		width: 15%;
+		margin: 10px;
+		/*display: flex;*/
+		/*text-align: center;*/
+		/*align-content: center;*/
+		flex-wrap: wrap;
+	}
+
+	.personPic{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;	
+		border: 2px solid #ffc000;
+		background-repeat: no-repeat;
+		background-size:cover;
+	}
+
+	.personImg{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+
+	.attender .infoRow{
+		font-size: 12px;
+	}
+
+	.attender p{
+		margin:  0 5px;
+	}
+
+	.attender i{
+		color: #ffc000;
+		margin-right: 3px;
+	}
+
+	#readyToAttend{
+		display: none;
+	}
+
+	.joinBtn{
+		position: absolute;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: #ffc000;
+		color: #ffc000;
+		bottom: 0;
+		right: 0;
+		cursor: pointer;
+	}
+
+	.joinBtn h1{
+		margin: 2px 5px;
+		font-size: 20px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+
+	}
+
+	.joinBtn:hover{
+		background-color: #ffc000;
+		color: white;
+	}
+
+
+/*}*/
