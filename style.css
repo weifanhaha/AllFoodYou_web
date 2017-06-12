@@ -1,4 +1,4 @@
-@media screen and (min-width: 880px){ 
+/*@media screen and (min-width: 880px){ */
 
 	/*common part*/
 
@@ -190,6 +190,44 @@
 	}
 	.infoDetail:hover .detailText{
 		visibility: visible;
+	}
+
+
+	.login-modal-content {
+		position: relative;
+	    background-color: #fefefe;
+	    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	    border: 1px solid #888;
+	    width: 30%; /* Could be more or less, depending on screen size */
+	    height: 500px;
+	    text-align: center;
+
+	}
+
+	.loginWith{
+		width: 60%;
+		margin:5px auto 5px auto;
+		padding: 1px 10px;
+		color: white;
+		font-size: 16px;
+		border-radius: 10px;
+		cursor: pointer;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+	}
+
+	.loginWith i{
+		margin-right: 5px;
+		font-size: 20px;
+	}
+
+	.signUp{
+		cursor: pointer;
+		color: #ffc000;
+		text-decoration: underline;
+		text-decoration-color: #ffc000;
+
 	}
 
 	/*for ingredients*/
@@ -535,5 +573,166 @@
 		
 	}
 
+	.chef{
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-}
+	.chefTitle{
+		padding-left: 15px;
+		display: flex;
+		margin-top: 20px; 
+		margin-bottom: 20px;
+	}
+
+	.chefImg{
+		overflow: hidden;
+		margin:30px; 
+		width:300px;
+		height: 300px;
+		
+		box-shadow: 0px 0px 20px #888888;
+		position: relative;
+	}
+
+	.chefInfo{
+		width: 50%;
+		padding: 30px;
+	}
+
+	.chefName{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-size: 30px;
+		font-weight: 500;
+		width: 30%;
+		margin: 0;
+
+	}
+
+	.followBtn{
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-size: 24px;
+		background-color: #ffc000;
+		border-radius: 8px;
+		border: 2px;
+		border-style: solid;
+		border-color: #ffc000;
+		width: 30%;
+		padding: 2px 5px; 
+		margin: 0;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.foodWrapper{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.foodItem{
+		width: 20%;
+		text-align: center;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+		font-size: 24px;
+	}
+
+	.foodImg{
+		width: 150px;
+		height: 150px;
+		overflow: hidden;
+		margin:10%; 
+		box-shadow: 0px 0px 20px #888888;
+	}
+
+	.ingreWrapper{
+		display: flex;
+		margin: 30px 50px 60px 10px;
+	}
+
+	.ingreList{
+		width: 30%
+		margin: 3%;
+		font-size: 24px;
+	}
+
+	.ingreItem{
+		margin: 10px;
+	}
+
+	.attendWrapper{
+		display: flex;
+		flex-wrap: nowrap;
+		position: relative;
+	}
+
+	.attender{
+		width: 15%;
+		margin: 10px;
+		/*display: flex;*/
+		/*text-align: center;*/
+		/*align-content: center;*/
+		flex-wrap: wrap;
+	}
+
+	.personPic{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;	
+		border: 2px solid #ffc000;
+		background-repeat: no-repeat;
+		background-size:cover;
+	}
+
+	.personImg{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+
+	.attender .infoRow{
+		font-size: 12px;
+	}
+
+	.attender p{
+		margin:  0 5px;
+	}
+
+	.attender i{
+		color: #ffc000;
+		margin-right: 3px;
+	}
+
+	#readyToAttend{
+		display: none;
+	}
+
+	.joinBtn{
+		position: absolute;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: #ffc000;
+		color: #ffc000;
+		bottom: 0;
+		right: 0;
+		cursor: pointer;
+	}
+
+	.joinBtn h1{
+		margin: 2px 5px;
+		font-size: 20px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+
+	}
+
+	.joinBtn:hover{
+		background-color: #ffc000;
+		color: white;
+	}
+
+
+/*}*/

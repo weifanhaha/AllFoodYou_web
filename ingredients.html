@@ -20,11 +20,11 @@
 	<div id="myheader">
 		<div class="myspan">
 			<span class="titleSpan activeSpan"><i class="fa fa-home fa-4" aria-hidden="true"></i></span>
-			<a><span class="titleSpan">食譜推薦</span></a>
+			<a href="./recipe.html"><span class="titleSpan">食譜推薦</span></a>
 			<a><span class="titleSpan activeSpan">買食材</span></a>
 			<a href="./food.html"><span class="titleSpan">買熟食</span></a>
 			<a href="./cook.html"><span class="titleSpan">找飯友</span></a>
-			<span class="titleSpan login">Log in</span>
+			<span class="titleSpan login" onclick="document.getElementById('login01').style.display='block'">Log in</span>
 		</div>
 		<input type="text" id="myInput" placeholder="請輸入欲搜尋食材之關鍵字">
 		<span class="search"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -46,7 +46,6 @@
 				<li>▹ 肉類</li>
 				<li>▹ 調味料</li>
 				<li>▹ 其他</li>
-
 			</ul>
 
 			
@@ -246,6 +245,26 @@
 					<span onclick="newTalk()" class="sendBtn">傳送</span>
 				</div>
 			</div>
+			<div id="login01" class="modal">
+				<div class="login-modal-content animate">
+					<h1>Log in</h1>
+					<p>Don't have an account?</p>
+					<p class="signUp">Sign up </p>
+						<span onclick="document.getElementById('login01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<div class="loginWith" style="background-color: #37639e;">
+						<p><i class="fa fa-facebook-square" aria-hidden="true"></i>Log in with Facebook</p>
+					</div>
+					<div class="loginWith" style="background-color: #5a9ef3;">
+						<p><i class="fa fa-twitter" aria-hidden="true"></i>Log in with Twitter</p>
+					</div>
+					<div class="loginWith" style="background-color: #e63527;">
+						<p><i class="fa fa-google-plus-square" aria-hidden="true"></i>Log in with Google</p>
+					</div>
+					<div class="loginWith" style="background: linear-gradient(to right,#ff6a39,#f154b7);">
+						<p><i class="fa  fa-instagram" aria-hidden="true"></i>Log in with Instagram</p>
+					</div>
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -320,6 +339,8 @@
 			document.getElementById("chat01").style.display = "none";
 			document.getElementById("chat02").style.display = "none";
 		}
+
+
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
