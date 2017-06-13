@@ -60,7 +60,7 @@
 
 	.login{
 		border-left-width: 3px;
-		border-color: white;
+		border-color: #ae850e;
 		border-left-style: solid;
 	}
 
@@ -471,7 +471,7 @@
 	    background-color: #ffc000;
 	    color: #fff;
 	    text-align: left;
-	    padding: 5px;
+	    padding: 3px;
 	    border-radius: 6px;
 
 	    /* Position the tooltip text */
@@ -526,9 +526,9 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		padding: 10px;
-		width: 20%;
-		border: 1px solid #ffc000;
+		padding: 8px;
+		width: 21%;
+		/*border: 1px solid #ffc000;*/
 		background-color: #ffc000;
 		color: white;
 		text-align: center;
@@ -730,6 +730,38 @@
 	}
 
 	.joinBtn:hover{
+		background-color: #ffc000;
+		color: white;
+	}
+
+	/*for recipe*/
+
+	.recipeIngre{
+		position: relative;
+	}
+
+	.gotoBtn{
+		position: absolute;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: #ffc000;
+		padding: 2px 7px;
+		color: #ffc000;
+		bottom: 0;
+		right: 30%;
+		cursor: pointer;
+
+	}
+
+	.gotoBtn h1{
+		margin: 2px 5px;
+		font-size: 20px;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-style: normal;
+
+	}
+
+	.gotoBtn:hover{
 		background-color: #ffc000;
 		color: white;
 	}
