@@ -4,6 +4,27 @@
 <!--created 2017/05
 	credit: Wei-Fan, Chang -->
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111930683-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-111930683-2');
+	</script>
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-111930683-2', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./style.css" rel="stylesheet" type="text/css"/>
@@ -48,7 +69,7 @@
 				<li>▹ 其他</li>
 			</ul>
 
-			
+
 		</div>
 		<div id="right">
 			<div id="top">
@@ -62,7 +83,7 @@
 					<div class="mySlides fade">
 						<div class="numbertext">2 / 3</div>
 						<img src="./img/uglyvege.png" style="width:100%">
-						<div class="text">Caption Two</div>		
+						<div class="text">Caption Two</div>
 					</div>
 
 					<div class="mySlides fade">
@@ -72,7 +93,7 @@
 					</div>
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
-				</div>	
+				</div>
 				<br>
 				<div style="text-align: center">
 					<span class="dot" onclick="currentSlide(1)"></span>
@@ -157,7 +178,7 @@
 							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
 							<span class="detailText">6/10下午於全聯購入</span> -->
 						</div>
-					</div>											
+					</div>
 					<div class="item">
 						<div class="titleBox">
 							<p>  八角香料</p>
@@ -181,7 +202,7 @@
 						<div class="infoRow infoDetail">
 							<p><i class="fa fa-info-circle" aria-hidden="true"></i>6/10下午於全聯購入</p>
 						</div>
-					</div>		
+					</div>
 					<div class="item">
 						<div class="titleBox">
 							<p>  小黃瓜</p>
@@ -206,7 +227,7 @@
 							<!-- <p><i class="fa fa-info-circle" aria-hidden="true"></i>詳細資訊</p>
 							<span class="detailText">6/13下午於小南門市場購入</span> -->
 						</div>
-					</div>	
+					</div>
 					<div class="item">
 						<div class="titleBox">
 							<p>  小白菜</p>
@@ -323,7 +344,7 @@
 				document.getElementById("myMessage").value="";
 			}
 			setTimeout(response, 2500);
-		}	
+		}
 
 		//Give response for demo
 		function response(){
