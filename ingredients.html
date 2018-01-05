@@ -388,6 +388,7 @@
 		  'brand': food[id]['brand'],         // Product brand (string).
 		  'price': food[id]['price'],         // Product price (currency).
 		});
+			console.log('send ga add impression');
 		}
 
 		function send_ga_add_product(i){
@@ -400,6 +401,7 @@
 			  'price': food[id]['price'],         // Product price (currency).
 			  'quantity': food[id]['quantity']    // Product quantity (number).
 			});
+			console.log('send ga add product');
 		}
 
 		function send_ga_purchase(){
@@ -409,12 +411,15 @@
 			  'affiliation': 'AllFoodYou_ingredients', 		// Affiliation (string).
 			  'revenue': food[id]['price'],       // Revenue (currency).
 			});
+			console.log('send ga purchase product');
+
 		}
 
 		function send_ga_refund(){
 			ga('ec:setAction', 'refund', {
 			  'id': food[id]['name']    					// Transaction ID is only required field for full refund.
 			});
+			console.log('send ga refund product');
 		}
 
 
