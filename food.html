@@ -72,7 +72,7 @@
 						<div class="itemImg">
 							<img src="./img/curry.jpg" alt="Avatar" class="image" style="height: 100%;">
 						    <div class="middle">
-						  		<div class="contactText" onclick="openChatBox('張葳凡')">我要預定</div>
+						  		<div class="contactText" onclick="openChatBox('張葳凡'); send_ga_add_product(0);">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -97,7 +97,7 @@
 						<div class="itemImg">
 							<img src="./img/vegetable.jpg" alt="Avatar" class="image" style="height:  100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('姚箴')">我要預定</div>
+						  		<div class="contactText" onclick="openChatBox('姚箴'); send_ga_add_product(1);">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -122,7 +122,7 @@
 						<div class="itemImg">
 							<img src="./img/rice.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('李知臨')">我要預定</div>
+						  		<div class="contactText" onclick="openChatBox('李知臨'); send_ga_add_product(2);">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -147,7 +147,7 @@
 						<div class="itemImg">
 							<img src="./img/soup.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('甯芝蓶')">我要預定</div>
+						  		<div class="contactText" onclick="openChatBox('甯芝蓶'); send_ga_add_product(3);">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -172,7 +172,7 @@
 						<div class="itemImg">
 							<img src="./img/gonbao.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('陳如琦')">我要預定</div>
+						  		<div class="contactText" onclick="openChatBox('陳如琦'); send_ga_add_product(4);">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -197,7 +197,7 @@
 						<div class="itemImg">
 							<img src="./img/ginger.jpg" alt="Avatar" class="image" style="height: 100%;">
 							<div class="middle">
-						  		<div class="contactText" onclick="openChatBox('林怡萱');">我要預定</div>
+						  		<div class="contactText" onclick="openChatBox('林怡萱'); send_ga_add_product(5);">我要預定</div>
 						    </div>
 						</div>
 						<div class="infoRow">
@@ -306,6 +306,63 @@
 
 	</script>
 
+	<script type="text/javascript">
+		// product id
+		var id = 0;
+		// product list
+		var food = [{'name': '日式咖哩飯','brand': '張葳凡','category': '日式','price': 60, 'quantity': 1},
+								{'name': '燙高麗菜','brand': '姚箴','category': '蔬菜類','price': 20, 'quantity': 1},
+								{'name': '白飯','brand': '李知臨','category': '主食類','price': 10, 'quantity': 1},
+								{'name': '香菇雞湯','brand': '甯芝蓶','category': '湯類','price': 30, 'quantity': 1},
+								{'name': '宮保雞丁','brand': '陳如琦','category': '中國菜','price': 60, 'quantity': 1},
+								{'name': '薑絲大腸','brand': '林怡萱','category': '客家菜','price': 50, 'quantity': 1}]
+
+		// Google analytics
+		ga('require', 'ec');
+		// ecommerce: transaction
+
+		function send_ga_add_impression(i){
+			id = i
+			ga('ec:addImpression', {            // Provide product details in an impressionFieldObject.
+			'name': food[id]['name'], 					// Product name (string).
+		  'category': food[id]['category'],   // Product category (string).
+		  'brand': food[id]['brand'],         // Product brand (string).
+		  'price': food[id]['price'],         // Product price (currency).
+		});
+		}
+
+		function send_ga_add_product(i){
+			id = i;
+			ga('ec:addProduct', {
+			// Provide product details in an productFieldObject.
+			  'name': food[id]['name'], 					// Product name (string).
+			  'category': food[id]['category'],   // Product category (string).
+			  'brand': food[id]['brand'],         // Product brand (string).
+			  'price': food[id]['price'],         // Product price (currency).
+			  'quantity': food[id]['quantity']    // Product quantity (number).
+			});
+		}
+
+		function send_ga_purchase(){
+			ga('ec:setAction', 'purchase', {
+			// Transaction details are provided in an actionFieldObject.
+			  'id': food[id]['name'],             // (Required) Transaction id (string).
+			  'affiliation': 'AllFoodYou_ingredients', 		// Affiliation (string).
+			  'revenue': food[id]['price'],       // Revenue (currency).
+			});
+		}
+
+		function send_ga_refund(){
+			ga('ec:setAction', 'refund', {
+			  'id': food[id]['name']    					// Transaction ID is only required field for full refund.
+			});
+		}
+
+}
+
+
+
+	</script>
 
 
 
