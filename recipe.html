@@ -12,7 +12,7 @@
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 	ga('create', 'UA-111930683-2', 'auto');
-	ga('set', 'page', '/AllFoodYou_web/recipe');
+	// ga('set', 'page', '/AllFoodYou_web/recipe');
 	ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
@@ -20,6 +20,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="./style.css" rel="stylesheet" type="text/css"/>
+	<link href="./js/myga.js" rel="stylesheet" type="text/javascript"/>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -126,7 +127,26 @@
 
 
 	</div>
+<script>
+		var page_name = "食譜頁面"
 
+		// login and sign up event
+
+		$('.login').click(function(){
+      ga('send', 'event', {
+        eventCategory: '登入',
+        eventAction: '點擊',
+        eventLabel: page_name
+      });
+		});
+		$('.signUp').click(function(){
+      ga('send', 'event', {
+        eventCategory: '註冊',
+        eventAction: '點擊',
+        eventLabel: page_name
+      });
+		})
+</script>
 
 </body>
 </html>
