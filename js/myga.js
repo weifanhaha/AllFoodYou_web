@@ -6,6 +6,13 @@ function send_login_event(pagename){
   });
 }
 
+    // search
+    $('.search').click(function(){
+      search_keyword = document.getElementById("myInput").value
+      url = "/search/" + search_keyword
+      document.getElementById("myInput").value = ""
+      ga('send', 'pageview', url);
+    })
 // function send_signup_event(pagename){
 
 // }

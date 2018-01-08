@@ -429,7 +429,13 @@
       	content_name: $(this).html(),
       });
 		});
-
+		// search
+		$('.search').click(function(){
+			search_keyword = document.getElementById("myInput").value
+			url = "/search/" + search_keyword
+			document.getElementById("myInput").value = ""
+			ga('send', 'pageview', url);
+		})
 	</script>
 
 
