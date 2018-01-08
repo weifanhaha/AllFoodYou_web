@@ -145,7 +145,16 @@
         eventAction: '點擊',
         eventLabel: page_name
       });
-		})
+		});
+
+		// add to wish list (category search)
+		$('.myUL li').click(function(){
+      ga('send', 'event', {
+        eventCategory: '分類搜尋',
+        eventAction: '點擊',
+        eventLabel: $(this).html()
+      });
+		});
 </script>
 
 </body>

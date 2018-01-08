@@ -336,7 +336,7 @@
 		function send_ga_add_product(i){
 			id = i;
 			ga('ec:addProduct', {
-			// Provide product details in an productFieldObject.
+																						// Provide product details in an productFieldObject.
 			  'name': food[id]['name'], 					// Product name (string).
 			  'category': food[id]['category'],   // Product category (string).
 			  'brand': food[id]['brand'],         // Product brand (string).
@@ -380,6 +380,14 @@
       });
 		})
 
+		// add to wish list (category search)
+		$('.myUL li').click(function(){
+      ga('send', 'event', {
+        eventCategory: '分類搜尋',
+        eventAction: '點擊',
+        eventLabel: $(this).html()
+      });
+		});
 
 	</script>
 
