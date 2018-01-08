@@ -16,6 +16,23 @@
 	ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
+		<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '404951663275719');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=404951663275719&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,6 +155,12 @@
         eventAction: '點擊',
         eventLabel: page_name
       });
+      fbq('track', 'Lead',
+      {
+      	content_name: page_name,
+      	content_category: 'login'
+
+      });
 		});
 		$('.signUp').click(function(){
       ga('send', 'event', {
@@ -145,7 +168,12 @@
         eventAction: '點擊',
         eventLabel: page_name
       });
-		});
+      fbq('track', 'CompleteRegistration',
+      {
+      	content_name: page_name,
+      	status: '已註冊'
+      });
+		})
 
 		// add to wish list (category search)
 		$('.myUL li').click(function(){
@@ -153,6 +181,12 @@
         eventCategory: '分類搜尋',
         eventAction: '點擊',
         eventLabel: $(this).html()
+      });
+      fbq('track', 'AddToWishlist',
+      {
+      	value: Math.floor((Math.random() * 100) + 1),
+      	currency: 'USD',
+      	content_name: $(this).html(),
       });
 		});
 </script>
