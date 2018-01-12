@@ -453,6 +453,13 @@
 			ga('send', 'pageview');
 		}
 
+		// when enter the page => add impression for all product
+		$(document).ready(function(){
+			for(i = 0; i < food.length; i++){
+				send_ga_add_impression(i);
+			}
+		});
+
 		// login and sign up event
 
 		$('.login').click(function(){
